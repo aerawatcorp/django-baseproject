@@ -1,0 +1,7 @@
+from .base import *
+
+SECRET_KEY = "" # Please override this at very first place.
+
+"""
+Override other settings below here
+"""
