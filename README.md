@@ -11,3 +11,10 @@ The django boilerplate with some more batteries (AA, AAA, etc already included)
 
 ## Versions
 - Django>4
+
+
+## Installation
+- Clone the repo from github
+- make virtual environment of your choice
+- `pip install -r requirements.baseproject.txt`
+
