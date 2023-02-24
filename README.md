@@ -8,3 +8,6 @@ The django boilerplate with some more batteries (AA, AAA, etc already included)
 - User Registration ++
 - Basic Templates and Login pages
 - Basic CMS for content posting
+
+## Versions
+- Django>4
