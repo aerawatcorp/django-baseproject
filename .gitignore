@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 baseproject/settings/env_*.py
 baseproject/settings/local.py
+db.sqlite3
+
+
