@@ -124,4 +124,4 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Extra Battery Settings
-from .batteries.kidx import KIDX_PREFIXES
+from .batteries.kidx import *
