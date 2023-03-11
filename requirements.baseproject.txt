@@ -6,6 +6,7 @@ Django==4.1.7
 mypy-extensions==1.0.0
 packaging==23.0
 pathspec==0.11.0
+Pillow==9.4.0
 platformdirs==3.1.1
 shortuuid==1.0.11
 sqlparse==0.4.3

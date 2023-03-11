@@ -7,7 +7,9 @@ from ..models.role import Role
 
 from django.utils.translation import gettext as _t
 
-
+"""
+The User Model
+"""
 class User(AbstractBaseUser, BaseModel):
     first_name = models.CharField(_t("First Name"), max_length=127)
     last_name = models.CharField(_t("Last Name"), max_length=127)
@@ -48,6 +50,10 @@ class User(AbstractBaseUser, BaseModel):
         return f"{self.email}"
 
 
+"""
+The OneToMany Model for User attributes
+Usage : create a bucket for 
+"""
 class UserAttribute(BaseModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     attribute_bucket = models.CharField(max_length=100, default="default")
@@ -59,7 +65,10 @@ class UserAttribute(BaseModel):
     class Meta:
         verbose_name = "User Attribute"
         verbose_name_plural = "User Attributes"
-        unique_together = ("user", "attribute")
+        unique_together = (
+            ("user", "attribute_bucket"),  # Can have several unique bucket types
+            ("user", "attribute_bucket", "attribute_type"),  # one user bucket can have unique attributes by type 
+        )
 
     def __str__(self):
         return self.user.email
